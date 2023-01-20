@@ -1,144 +1,175 @@
-include_directories ("${CMAKE_SOURCE_DIR}/include")
-
-set(GENERATOR_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/include/generator")
+set(GENERATOR_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include")
+set(GENERATOR_INCLUDE_FILE_DIR "${PROJECT_SOURCE_DIR}/include/generator")
 
 set(GENERATOR_HEADERS
-	${GENERATOR_INCLUDE_DIR}/AnyGenerator.hpp
-	${GENERATOR_INCLUDE_DIR}/AnyMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/AnyPath.hpp
-	${GENERATOR_INCLUDE_DIR}/AnyShape.hpp
-	${GENERATOR_INCLUDE_DIR}/AxisFlipMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/Axis.hpp
-	${GENERATOR_INCLUDE_DIR}/AxisSwapMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/AxisSwapPath.hpp
-	${GENERATOR_INCLUDE_DIR}/AxisSwapShape.hpp
-	${GENERATOR_INCLUDE_DIR}/BezierMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/BezierShape.hpp
-	${GENERATOR_INCLUDE_DIR}/BoxMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/CappedConeMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/CappedCylinderMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/CappedTubeMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/CapsuleMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/CircleShape.hpp
-	${GENERATOR_INCLUDE_DIR}/ConeMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/ConvexPolygonMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/CylinderMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/DiskMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/DodecahedronMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/Edge.hpp
-	${GENERATOR_INCLUDE_DIR}/EmptyMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/EmptyPath.hpp
-	${GENERATOR_INCLUDE_DIR}/EmptyShape.hpp
-	${GENERATOR_INCLUDE_DIR}/ExtrudeMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/FlipMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/FlipPath.hpp
-	${GENERATOR_INCLUDE_DIR}/FlipShape.hpp
-	${GENERATOR_INCLUDE_DIR}/generator.hpp
-	${GENERATOR_INCLUDE_DIR}/GridShape.hpp
-	${GENERATOR_INCLUDE_DIR}/HelixPath.hpp
-	${GENERATOR_INCLUDE_DIR}/IcosahedronMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/IcoSphereMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/Iterator.hpp
-	${GENERATOR_INCLUDE_DIR}/KnotPath.hpp
-	${GENERATOR_INCLUDE_DIR}/LatheMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/LinePath.hpp
-	${GENERATOR_INCLUDE_DIR}/LineShape.hpp
-	${GENERATOR_INCLUDE_DIR}/math.hpp
-	${GENERATOR_INCLUDE_DIR}/MergeMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/MergePath.hpp
-	${GENERATOR_INCLUDE_DIR}/MergeShape.hpp
-	${GENERATOR_INCLUDE_DIR}/MeshVertex.hpp
-	${GENERATOR_INCLUDE_DIR}/MirrorMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/ObjWriter.hpp
-	${GENERATOR_INCLUDE_DIR}/ParametricMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/ParametricPath.hpp
-	${GENERATOR_INCLUDE_DIR}/ParametricShape.hpp
-	${GENERATOR_INCLUDE_DIR}/PathVertex.hpp
-	${GENERATOR_INCLUDE_DIR}/PlaneMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/RectangleShape.hpp
-	${GENERATOR_INCLUDE_DIR}/RepeatMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/RepeatPath.hpp
-	${GENERATOR_INCLUDE_DIR}/RepeatShape.hpp
-	${GENERATOR_INCLUDE_DIR}/RotateMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/RotatePath.hpp
-	${GENERATOR_INCLUDE_DIR}/RotateShape.hpp
-	${GENERATOR_INCLUDE_DIR}/RoundedBoxMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/RoundedRectangleShape.hpp
-	${GENERATOR_INCLUDE_DIR}/ScaleMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/ScalePath.hpp
-	${GENERATOR_INCLUDE_DIR}/ScaleShape.hpp
-	${GENERATOR_INCLUDE_DIR}/ShapeToPath.hpp
-	${GENERATOR_INCLUDE_DIR}/ShapeVertex.hpp
-	${GENERATOR_INCLUDE_DIR}/SphereMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/SphericalConeMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/SphericalTriangleMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/SpherifyMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/SpringMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/SubdivideMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/SubdividePath.hpp
-	${GENERATOR_INCLUDE_DIR}/SubdivideShape.hpp
-	${GENERATOR_INCLUDE_DIR}/SvgWriter.hpp
-	${GENERATOR_INCLUDE_DIR}/TeapotMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/TorusKnotMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/TorusMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/TransformMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/TransformPath.hpp
-	${GENERATOR_INCLUDE_DIR}/TransformShape.hpp
-	${GENERATOR_INCLUDE_DIR}/TranslateMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/TranslatePath.hpp
-	${GENERATOR_INCLUDE_DIR}/TranslateShape.hpp
-	${GENERATOR_INCLUDE_DIR}/Triangle.hpp
-	${GENERATOR_INCLUDE_DIR}/TriangleMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/TubeMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/utils.hpp
-	${GENERATOR_INCLUDE_DIR}/UvFlipMesh.hpp
-	${GENERATOR_INCLUDE_DIR}/UvSwapMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/AnyGenerator.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/AnyMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/AnyPath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/AnyShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/AxisFlipMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/Axis.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/AxisSwapMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/AxisSwapPath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/AxisSwapShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/BezierMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/BezierShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/BoxMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/CappedConeMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/CappedCylinderMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/CappedTubeMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/CapsuleMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/CircleShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/ConeMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/ConvexPolygonMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/CylinderMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/DiskMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/DodecahedronMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/Edge.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/EmptyMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/EmptyPath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/EmptyShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/ExtrudeMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/FlipMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/FlipPath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/FlipShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/generator.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/GridShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/HelixPath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/IcosahedronMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/IcoSphereMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/Iterator.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/KnotPath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/LatheMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/LinePath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/LineShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/math.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/MergeMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/MergePath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/MergeShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/MeshVertex.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/MirrorMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/ObjWriter.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/ParametricMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/ParametricPath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/ParametricShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/PathVertex.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/PlaneMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/RectangleShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/RepeatMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/RepeatPath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/RepeatShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/RotateMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/RotatePath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/RotateShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/RoundedBoxMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/RoundedRectangleShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/ScaleMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/ScalePath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/ScaleShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/ShapeToPath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/ShapeVertex.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/SphereMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/SphericalConeMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/SphericalTriangleMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/SpherifyMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/SpringMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/SubdivideMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/SubdividePath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/SubdivideShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/SvgWriter.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/TeapotMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/TorusKnotMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/TorusMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/TransformMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/TransformPath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/TransformShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/TranslateMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/TranslatePath.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/TranslateShape.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/Triangle.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/TriangleMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/TubeMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/utils.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/UvFlipMesh.hpp
+	${GENERATOR_INCLUDE_FILE_DIR}/UvSwapMesh.hpp
 )
 
 set(GENERATOR_SOURCES
-	AnyMesh.cpp
-	AnyPath.cpp
-	AnyShape.cpp
-	BoxMesh.cpp
-	CappedConeMesh.cpp
-	CappedCylinderMesh.cpp
-	CappedTubeMesh.cpp
-	CapsuleMesh.cpp
-	CircleShape.cpp
-	ConeMesh.cpp
-	ConvexPolygonMesh.cpp
-	CylinderMesh.cpp
-	DiskMesh.cpp
-	DodecahedronMesh.cpp
-	EmptyMesh.cpp
-	EmptyPath.cpp
-	EmptyShape.cpp
-	GridShape.cpp
-	HelixPath.cpp
-	IcosahedronMesh.cpp
-	IcoSphereMesh.cpp
-	KnotPath.cpp
-	LinePath.cpp
-	LineShape.cpp
-	ObjWriter.cpp
-	RectangleShape.cpp
-	SphereMesh.cpp
-	SphericalConeMesh.cpp
-	SphericalTriangleMesh.cpp
-	SpringMesh.cpp
-	SvgWriter.cpp
-	ParametricMesh.cpp
-	ParametricPath.cpp
-	ParametricShape.cpp
-	PlaneMesh.cpp
-	RoundedBoxMesh.cpp
-	RoundedRectangleShape.cpp
-	TeapotMesh.cpp
-	TorusKnotMesh.cpp
-	TorusMesh.cpp
-	TriangleMesh.cpp
-	TubeMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/AnyMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/AnyPath.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/AnyShape.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/BoxMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/CappedConeMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/CappedCylinderMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/CappedTubeMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/CapsuleMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/CircleShape.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/ConeMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/ConvexPolygonMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/CylinderMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/DiskMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/DodecahedronMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/EmptyMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/EmptyPath.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/EmptyShape.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/GridShape.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/HelixPath.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/IcosahedronMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/IcoSphereMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/KnotPath.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/LinePath.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/LineShape.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/ObjWriter.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/RectangleShape.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SphereMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SphericalConeMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SphericalTriangleMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SpringMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SvgWriter.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/ParametricMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/ParametricPath.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/ParametricShape.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/PlaneMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/RoundedBoxMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/RoundedRectangleShape.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/TeapotMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/TorusKnotMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/TorusMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/TriangleMesh.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/TubeMesh.cpp
 )
 
-add_library(generator${SUFFIX} STATIC ${GENERATOR_SOURCES} ${GENERATOR_HEADERS})
+add_library(generator STATIC ${GENERATOR_SOURCES} ${GENERATOR_HEADERS})
 
+if(MSVC)
+	target_compile_options(generator PRIVATE /W3)
+else()
+	target_compile_options(generator PRIVATE -std=c++11 -pedantic -Wall -Wextra)
+endif()
+
+option(GENERATOR_USE_GLM "Use GLM instead of GML (experimental)" OFF)
+
+if(GENERATOR_USE_GLM)
+	message(STATUS "Using GLM instead of GML for math (note the similar names).  Support for this is experimental!")
+	target_compile_definitions(generator PUBLIC GENERATOR_USE_GLM=1 GLM_ENABLE_EXPERIMENTAL=1)
+endif()
+
+if(GENERATOR_USE_GLM)
+	option(GENERATOR_SUFFIX_GLM "Suffix library name with 'glm' when using GLM (otherwise, does nothing)" OFF)
+	set(GLM_INCLUDE_DIR "" CACHE FILEPATH "GLM include path")
+
+	if(GENERATOR_SUFFIX_GLM AND GENERATOR_USE_GLM)
+		set(SUFFIX "-glm")
+	endif()
+else()
+	set(GML_INCLUDE_DIR "" CACHE FILEPATH "GML include path")
+endif()
+
+if(GML_INCLUDE_DIR AND NOT GENERATOR_USE_GLM)
+	target_include_directories(generator PUBLIC ${GML_INCLUDE_DIR})
+elseif(GLM_INCLUDE_DIR AND GENERATOR_USE_GLM)
+	target_include_directories(generator PUBLIC ${GLM_INCLUDE_DIR})
+endif()
+
+target_include_directories(generator PUBLIC
+	${GENERATOR_INCLUDE_DIR})
